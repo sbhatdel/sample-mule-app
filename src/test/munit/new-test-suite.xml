@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="new-test-suite.xml" />
+	<configuration-properties doc:name="Configuration properties" doc:id="be8bf3b1-5d7d-4f3a-82a0-4b436b9ce2d1" file="test.properties" />
+	<munit:test name="new-test-suite-sample-mule-appFlowTest" description="Test" doc:id="dd9b0e94-6c69-421d-bcce-f08579e46257" >
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to sample-mule-appFlow" doc:id="7df7dcdc-e291-4a09-833f-0fade525466e" name="sample-mule-appFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="e18e837c-0866-4953-8985-fd46b62b008b" expression="#[payload]" is="#[MunitTools::equalTo()]" message="#['Hello World']"/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
