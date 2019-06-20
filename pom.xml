@@ -64,7 +64,8 @@
                         <formats>
                             <format>html</format>
                         </formats>
-                         
+				      <runtimeProduct>MULE_EE</runtimeProduct>
+                        
                     </coverage>
                 </configuration>
             </plugin>
