@@ -63,10 +63,9 @@
                         <runCoverage>true</runCoverage>
                         <formats>
                             <format>html</format>
-                        </formats>
-				      <runtimeProduct>MULE_EE</runtimeProduct>
-                        
+                        </formats>                     
                     </coverage>
+				    <runtimeProduct>MULE_EE</runtimeProduct>
                 </configuration>
             </plugin>
 		</plugins>
