@@ -98,6 +98,13 @@
             <scope>test</scope>
         </dependency>
 	</dependencies>
+	<distributionManagement>
+    <repository>
+        <id>mule</id>
+        <name>mule</name>
+        <url>http://localHost:8084/nexus/repository/mule/</url>
+    </repository>	
+	</distributionManagement>
 
 	<repositories>
           <repository>
