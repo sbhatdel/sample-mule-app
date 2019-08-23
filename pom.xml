@@ -31,7 +31,7 @@
 				        <username>sathyabhat-cicd</username>
 				        <password>Dell@0506S</password>
 				        <workerType>Micro</workerType>
-				        <environment>Sandbox</environment>
+				        <environment>${env.ENV}</environment>
 				       <applicationName>${project.name}</applicationName>
 				    </cloudHubDeployment>
 				     <classifier>mule-application</classifier>
