@@ -15,6 +15,13 @@
 		</munit:execution>
 		<munit:validation >
 			<munit-tools:assert-that doc:name="Assert that" doc:id="e18e837c-0866-4953-8985-fd46b62b008b" expression="#[payload]" is="#[MunitTools::equalTo('Hello World1')]" message="#['Test passed']"/>
+			<munit-tools:verify-call doc:name="Verify call" doc:id="b901b958-1ec5-481f-9b53-22c3d01821b3" processor="set-payload" times="1">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="#['Hello World1']" attributeName="value" />
+					<munit-tools:with-attribute whereValue="Set Payload Hello World" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="3d8fb417-53b1-4d66-b1cb-efaed2f08311" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+			</munit-tools:verify-call>
 		</munit:validation>
 	</munit:test>
 
